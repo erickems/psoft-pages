@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="contagem"></h1>
+    <script> 
+        let segundos = 0
+        function conta(){
+            contagem.innerText = segundos
+            segundos += 1
+            setTimeout(conta, 1000)
+        }
+        conta()
+    </script>
+    <!--<script> 
+        let segundos = 0
+        function conta(){
+            console.log(segundos)
+            segundos += 1
+            conta()
+        }
+        conta()
+    </script>-->
+</body>
+</html>
