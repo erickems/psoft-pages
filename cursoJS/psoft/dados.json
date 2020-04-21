@@ -1,4 +1,6 @@
 {
     "nome": "Erick",
-    "idade": 20
+    "idade": 20,
+    "cidade": "campina grande",
+    "universidade": "UFCG"
 }
