@@ -23,18 +23,6 @@ console.log(parseFloat(x))*/
 //     console.log(`${nome} NÃO construiu esse script`)
 // ))
 
-// var numero = 0
-// function comecar(){
-//     contagem.innerText = numero
-//     numero += 1
-//     setTimeout(comecar, 500)
-// }
-
-// function resetar(){
-//     numero = 0
-//     contagem.innerText = numero
-// }
-
 var numero = 0
 var interval
 

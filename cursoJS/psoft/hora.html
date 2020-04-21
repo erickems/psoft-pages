@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora</title>
+    <style>
+        #contagem{
+            background-color: black;
+            color: chartreuse;
+            text-align: center;
+            font-size: 50px;
+            border: 2px solid green;
+            width: 210px;
+        }
+        body{
+            background-color: lightgray;
+        }
+    </style>
+    <script>
+        setInterval(() =>{
+        var data = new Date()
+        var horas = data.getHours()
+        var minutos = data.getMinutes()
+        var segundos = data.getSeconds()
+
+        if(minutos < 10){minutos = "0" + minutos}
+        if(segundos < 10){segundos = "0" + segundos}
+
+        document.getElementById('contagem').value = (horas+":"+minutos+":"+segundos);
+        },1000)
+    </script>
+</head>
+<body>
+    <label style="font-size: 50px;">Hora atual: </label>
+    <input type="text" id="contagem"/> 
+</body>
+</html>
