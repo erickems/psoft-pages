@@ -9,12 +9,12 @@
             background-color: black;
             color: chartreuse;
             text-align: center;
-            font-size: 50px;
+            font-size: 53px;
             border: 2px solid green;
-            width: 210px;
+            width: 240px;
         }
         body{
-            background-color: lightgray;
+            background-color: rgb(207, 196, 196);
         }
     </style>
     <script>
@@ -27,7 +27,7 @@
         if(minutos < 10){minutos = "0" + minutos}
         if(segundos < 10){segundos = "0" + segundos}
 
-        document.getElementById('contagem').value = (horas+":"+minutos+":"+segundos);
+        document.getElementById('contagem').value = (horas+"h"+minutos+"min");
         },1000)
     </script>
 </head>

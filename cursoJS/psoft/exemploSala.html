@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo sala</title>
+    <script>
+        let valores;
+
+        let promise = fetch('/dados.json')
+        
+        promise.then((response)=>{
+            response.json()
+            .then((dados)=>{
+                valores = dados;
+                console.log(valores)
+            }) 
+        })
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
