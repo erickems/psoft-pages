@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo sala</title>
+</head>
+<body>
     <script>
         let valores;
 
-        let promise = fetch('/~psoft-pages/cursoJS/psoft/dados.json')
+        let promise = fetch('/psoft-pages/cursoJS/psoft/dados.json')
         
-        promise.then((response)=>{
+        promise.then((response)=> {
             response.json()
-            .then((dados)=>{
+            .then((dados)=> {
                 valores = dados;
                 console.log(valores)
             }) 
         })
 
     </script>
-</head>
-<body>
-    
 </body>
 </html>
