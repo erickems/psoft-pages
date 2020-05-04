@@ -26,7 +26,7 @@ function start(){
 
 function selecionaNovaDoenca(){
     for(let i = 1; i <= 4; i++){
-        document.querySelector(`#dica${i}`).innerText = ""
+        document.querySelector(`#dica${i}`).innerText = `Dica ${i}: `
     }
     document.querySelector("#acertou").innerText = ""
 
