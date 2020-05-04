@@ -1,13 +1,15 @@
 
 let myRequest =  new Request("./dados.json")
-let form = document.querySelector("form")
+let form = document.querySelector("#form")
 let button = document.querySelector("#button").addEventListener("click", getValue)
-let inputRadio = ""
-let jsonValor = ""
+let buttonsim = document.querySelector("#sim").addEventListener("click", sim)
+let buttonnao = document.querySelector("#nao").addEventListener("click", nao)
+let div = document.querySelector("#after")
+div.style.visibility = "hidden"
 let arrayDoencas
 let arraySintomas
 let click = 0
-let dica = 1 //indice da dica. A dica[0] já foi usada na inicializacao
+let dica = 1 
 let randomDoenca
 
 async function carregaPagina(){
@@ -37,40 +39,62 @@ function selecionaNovaDoenca(){
 
 function getValue(){
     let data = new FormData(form)
+    let inputSelecionado
+    let nomeDaDoenca
     
     for (const f of data){
-        inputRadio = f[1]
+        inputSelecionado = f[1]
     }
 
-    jsonValor = arrayDoencas[randomDoenca].nome
-    verifica(arrayDoencas[randomDoenca].dicas)
+    nomeDaDoenca = arrayDoencas[randomDoenca].nome
+    verifica(inputSelecionado, nomeDaDoenca, arrayDoencas[randomDoenca].dicas)
 
     click++
 }
 
-function verifica(dicas){
+function verifica(inputSelecionado, nomeDaDoenca, dicas){
     let sintoma = dicas[dica]
     let queryId = `#dica${dica+1}`
     
-    if ((inputRadio != jsonValor) && click < 3){
+    if ((inputSelecionado != nomeDaDoenca) && click < 3){
         document.querySelector(queryId).innerText = "Dica " + (dica+1) + ": " + sintoma
     }
-    else if (inputRadio == jsonValor){
+    else if (inputSelecionado == nomeDaDoenca){
         document.querySelector("#acertou").innerText = "Você acertou!"
-        setTimeout(()=>{
-            selecionaNovaDoenca()
+        if(arrayDoencas.length == 1){
             click = 0
             dica = 1
-        },700)
+            div.style.visibility = "visible"
+        } else {
+            setTimeout(()=>{
+                selecionaNovaDoenca()
+                click = 0
+                dica = 1
+            },700)
+        }
     }
-    else if ((inputRadio != jsonValor) && click >= 3){
+    else if ((inputSelecionado != nomeDaDoenca) && click >= 3){
         document.querySelector("#acertou").innerText = "Acabou as dicas. Você Errou!"
-        setTimeout(()=>{
-            selecionaNovaDoenca()
+        if(arrayDoencas.length == 1){
             click = 0
             dica = 1
-        },700)
+            div.style.visibility = "visible"
+        } else {
+            setTimeout(()=>{
+                selecionaNovaDoenca()
+                click = 0
+                dica = 1
+            },700)
+        }
     }
     dica += 1
+}
+
+function sim(){
+     location.reload()
+}
+
+function nao(){
+    window.close()
 }
 carregaPagina()

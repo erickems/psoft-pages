@@ -35,5 +35,41 @@
             "coceira no nariz",
             "vermelhidão nos olhos e lacrimejamento"
         ]
+    },
+    {
+        "nome":"aids"
+        ,"dicas":[
+            "perda de massa muscular",
+            "língua branca",
+            "inchaço dos gânglios",
+            "infecções recorrentes"
+        ]
+    },
+    {
+        "nome":"febre amarela"
+        ,"dicas":[
+            "dor nas costas",
+            "náuseas",
+            "mal-estar",
+            "pele e olhos amarelados"
+        ]
+    },
+    {
+        "nome":"hepatite"
+        ,"dicas":[
+            "dor no abdômen",
+            "fadiga",
+            "amarelo nos olhos",
+            "urina escura"
+        ]
+    },
+    {
+        "nome":"catapora"
+        ,"dicas":[
+            "febre",
+            "fadiga",
+            "coceira",
+            "bolhas e manchas vermelhas na pele"
+        ]
     }
 ]
