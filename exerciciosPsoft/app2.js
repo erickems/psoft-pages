@@ -58,6 +58,8 @@ function verifica(inputSelecionado, nomeDaDoenca, dicas){
     
     if ((inputSelecionado != nomeDaDoenca) && click < 3){
         document.querySelector(queryId).innerText = "Dica " + (dica+1) + ": " + sintoma
+        dica += 1
+        return
     }
     else if (inputSelecionado == nomeDaDoenca){
         document.querySelector("#acertou").innerText = "Você acertou!"
@@ -66,11 +68,11 @@ function verifica(inputSelecionado, nomeDaDoenca, dicas){
             dica = 1
             div.style.visibility = "visible"
         } else {
-            setTimeout(()=>{
-                selecionaNovaDoenca()
-                click = 0
-                dica = 1
-            },700)
+            return setTimeout(()=>{
+                        selecionaNovaDoenca()
+                        click = 0
+                        dica = 1
+                    },700)
         }
     }
     else if ((inputSelecionado != nomeDaDoenca) && click >= 3){
@@ -80,17 +82,14 @@ function verifica(inputSelecionado, nomeDaDoenca, dicas){
             dica = 1
             div.style.visibility = "visible"
         } else {
-            setTimeout(()=>{
-                selecionaNovaDoenca()
-                click = 0
-                dica = 1
-            },700)
-            return
+            return setTimeout(()=>{
+                        selecionaNovaDoenca()
+                        click = 0
+                        dica = 1
+                    },700)
         }
     }
-    dica += 1
 }
-
 function sim(){
      location.reload()
 }
