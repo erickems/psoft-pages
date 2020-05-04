@@ -85,6 +85,7 @@ function verifica(inputSelecionado, nomeDaDoenca, dicas){
                 click = 0
                 dica = 1
             },700)
+            return
         }
     }
     dica += 1
