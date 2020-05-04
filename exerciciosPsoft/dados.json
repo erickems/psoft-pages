@@ -1,28 +1,39 @@
 
-{
-    "covid":[
-        "febre alta",
-        "tosse constante",
-        "cansaço",
-        "dificuldades para respirar"
-    ],
-    "gripe":[
-        "congestão nasal",
-        "dor de cabeça",
-        "febre",
-        "fraqueza"
-    ],
-    "dengue":[
-        "dor de cabeça",
-        "falta de apetite",
-        "febre alta > 38.5°",
-        "dor ao movimentar os olhos"
-    ],
-    "alergia":[
-        "espirros constantes",
-        "coriza",
-        "coceira no nariz",
-        "vermelhidão nos olhos e lacrimejamento"
-    ]
-    
-}
+[
+    { 
+        "nome":"covid-19"
+        ,"dicas":[
+            "febre alta",
+            "tosse constante",
+            "cansaço",
+            "dificuldades para respirar"
+        ]
+    },
+    {
+        "nome":"gripe"
+        ,"dicas":[
+            "congestão nasal",
+            "dor de cabeça",
+            "febre",
+            "fraqueza"
+        ]
+    },
+    {
+        "nome":"dengue"
+        ,"dicas":[
+            "dor de cabeça",
+            "falta de apetite",
+            "febre alta > 38.5°",
+            "dor ao movimentar os olhos"
+        ]
+    },
+    {
+        "nome":"alergia"
+        ,"dicas":[
+            "espirros constantes",
+            "coriza",
+            "coceira no nariz",
+            "vermelhidão nos olhos e lacrimejamento"
+        ]
+    }
+]
