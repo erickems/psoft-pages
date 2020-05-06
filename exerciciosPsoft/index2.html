@@ -7,46 +7,36 @@
     <title>Sintomas</title>
 </head>
 <body>
-    <p>Será que a partir de <em>algumas dicas</em> você seria capaz de descobrir de qual doença estamos falando?</p>
+    <p>Será que a partir de <em><strong>algumas dicas</strong></em> você seria capaz de descobrir de qual doença estamos falando?</p>
+    
+    <p id="pontos"></p>
+
     <form id="form">
         <h5 id="dica1">Dica 1:</h5>
         <h4 id="dica2">Dica 2:</h4>
         <h3 id="dica3">Dica 3:</h3>
         <h2 id="dica4">Dica 4:</h2>
         <div>
-            <input type="radio" name="doença" value="gripe" id="gripe">
-            <label for="gripe">Gripe</label><br>
-            
-            <input type="radio" name="doença" value="covid-19" id="covid-19">
-            <label for="covid-19">Covid-19</label><br>
-            
-            <input type="radio" name="doença" value="dengue" id="dengue">
-            <label for="dengue">Dengue</label><br>
-            
-            <input type="radio" name="doença" value="alergia" id="alergia">
-            <label for="alergia">Rinite</label><br>
-
-            <input type="radio" name="doença" value="aids" id="aids">
-            <label for="aids">Aids</label><br>
-            
-            <input type="radio" name="doença" value="hepatite" id="hepatite">
-            <label for="hepatite">Hepatite</label><br>
-            
-            <input type="radio" name="doença" value="febre amarela" id="febre amarela">
-            <label for="febre amarela">Febre Amarela</label><br>
-            
-            <input type="radio" name="doença" value="catapora" id="catapora">
-            <label for="catapora">Catapora</label><br><br>
+            <select name="doenca">
+                <option value="" selected>---</option>
+                <option value="gripe">Gripe</option>
+                <option value="alergia">Alergia</option>
+                <option value="dengue">Dengue</option>
+                <option value="hepatite">Hepatite</option>
+                <option value="aids">Aids</option>
+                <option value="covid-19">Covid-19</option>
+                <option value="febre amarela">Febre Amarela</option>
+                <option value="catapora">Catapora</option>
+            </select>
             
             <input type="button" value="Enviar" id="button">
         </div>
         <h1 id="acertou"></h1>
-        <div id="after">
-            <p>Deseja jogar novamente?</p>
-            <input type="button" value="Sim" id="sim">
-            <input type="button" value="Não" id="nao" onclick="location.href='https://www.google.com.br'">
-        </div>
     </form>
+    <div id="after">
+        <input type="button" value="Jogar novamente" id="sim">
+        <input type="button" value="Sair" id="nao">
+    </div>
     <script src="app2.js"></script>
 </body>
 </html>

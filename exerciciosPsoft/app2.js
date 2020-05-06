@@ -1,5 +1,3 @@
-
-let myRequest =  new Request("./dados.json")
 let form = document.querySelector("#form")
 let button = document.querySelector("#button").addEventListener("click", getValue)
 let buttonsim = document.querySelector("#sim").addEventListener("click", sim)
@@ -10,18 +8,19 @@ let arrayDoencas
 let arraySintomas
 let click = 0
 let dica = 1 
+let pontos = 0
 let randomDoenca
 
 async function carregaPagina(){
-    let json = await (await fetch(myRequest)).json()
-    
-    arrayDoencas = json  
+    arrayDoencas = await (await fetch("./dados.json")).json()
+ 
     randomDoenca = parseInt((Math.random() * 10) % arrayDoencas.length) //escolhi o indice da doença
     
     start()
 }
 
 function start(){
+    document.querySelector("#pontos").innerText = `Pontuação: ${pontos}`
     arraySintomas = arrayDoencas[randomDoenca].dicas  //peguei o array de sintomas da doenca escolhida
     document.querySelector("#dica1").innerText = "Dica 1: " + arraySintomas[0] // sintoma 1
 }
@@ -53,16 +52,14 @@ function getValue(){
 }
 
 function verifica(inputSelecionado, nomeDaDoenca, dicas){
-    let sintoma = dicas[dica]
-    let queryId = `#dica${dica+1}`
-    
     if ((inputSelecionado != nomeDaDoenca) && click < 3){
-        document.querySelector(queryId).innerText = "Dica " + (dica+1) + ": " + sintoma
+        document.querySelector(`#dica${dica+1}`).innerText = "Dica " + (dica+1) + ": " + dicas[dica]
         dica += 1
         return
     }
     else if (inputSelecionado == nomeDaDoenca){
         document.querySelector("#acertou").innerText = "Você acertou!"
+        pontos += 4 - (dica - 1)
         if(arrayDoencas.length == 1){
             click = 0
             dica = 1
@@ -90,11 +87,13 @@ function verifica(inputSelecionado, nomeDaDoenca, dicas){
         }
     }
 }
+
 function sim(){
-     location.reload()
+    location.reload()
 }
 
 function nao(){
     window.close()
 }
+
 carregaPagina()
