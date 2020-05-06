@@ -8,7 +8,7 @@ let arrayDoencas
 let arraySintomas
 let click = 0
 let dica = 1 
-let pontos = 0
+let pontuacao = 0
 let randomDoenca
 
 async function carregaPagina(){
@@ -20,7 +20,7 @@ async function carregaPagina(){
 }
 
 function start(){
-    document.querySelector("#pontos").innerText = `Pontuação: ${pontos}`
+    document.querySelector("#pontos").innerText = `Pontuação: ${pontuacao}`
     arraySintomas = arrayDoencas[randomDoenca].dicas  //peguei o array de sintomas da doenca escolhida
     document.querySelector("#dica1").innerText = "Dica 1: " + arraySintomas[0] // sintoma 1
 }
@@ -59,7 +59,7 @@ function verifica(inputSelecionado, nomeDaDoenca, dicas){
     }
     else if (inputSelecionado == nomeDaDoenca){
         document.querySelector("#acertou").innerText = "Você acertou!"
-        pontos += 4 - (dica - 1)
+        pontuacao += 4 - (dica - 1)
         if(arrayDoencas.length == 1){
             click = 0
             dica = 1
