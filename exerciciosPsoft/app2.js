@@ -63,6 +63,8 @@ function verifica(inputSelecionado, nomeDaDoenca, dicas){
         if(arrayDoencas.length == 1){
             click = 0
             dica = 1
+            document.querySelector("#pontos").innerText = `Pontuação: ${pontuacao}`
+            document.querySelector("#parabens").innerText = `Parabéns, você fez ${pontuacao} de 32 pontos!`
             div.style.visibility = "visible"
         } else {
             return setTimeout(()=>{
@@ -77,6 +79,7 @@ function verifica(inputSelecionado, nomeDaDoenca, dicas){
         if(arrayDoencas.length == 1){
             click = 0
             dica = 1
+            document.querySelector("#parabens").innerText = `Parabéns, você fez ${pontuacao} de 32 pontos!`
             div.style.visibility = "visible"
         } else {
             return setTimeout(()=>{
