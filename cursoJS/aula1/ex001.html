@@ -3,20 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fugindo Da Maldição</title>
+    <title>Loreum Ipsum</title>
     <style>
-        body{
-            background-color: darkcyan;
-            color: rgb(228, 188, 11);
+        /* body, html{
+            height: 100%;
+            width: 100%;
+        } */
+        #div1{
+            border: 1px solid black;
+            align-content: center;
+            height: 91%;
+            width: 80%;
+            margin: 0 auto;
             font: normal 12pt courier;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        #div2{
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 5px;
+            
+        }
+        #div3{
+            border: 1px solid black;
+            position: relative;
+            top: ;
+            bottom: 50%;
+            width: 20%;
+            margin-left: 70%;
+        }
+        p{
+            text-indent: 30px;
+            text-align: justify;
+            font-size: large;
         }
     </style>
+    <script>
+        
+        function submeter(){
+            window.document.body.style.backgroundColor = "lightred";
+            setTimeout(()=>{window.document.body.style.backgroundColor = "white";}, 50)
+        }
+        </script>
 </head>
 <body>
-    <h1>JavaScript, Html, Css</h1>
-    <h1>códigos de programação</h1> 
-    <script> 
-        //window.alert('Mensagem de alerta') 
-    </script>
+    <div id="div1">
+        <h1 style="text-align: center;">Colocando em prática conceitos de HTML</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+        <ul>
+            <li>
+                Cartão de Crédito
+                <ol>
+                    <li>
+                        Assim
+                    </li>
+                    <li>
+                        Assado
+                    </li>
+                </ol>
+            </li>
+            <li>
+                Cartão de Débito 
+            </li>
+            <li>
+                Dinheiro 
+            </li>
+        </ul>
+        <div id="div2">
+            <p style="text-indent: 0px;">Submeter ação realizadas:</p>
+            <input type="text" placeholder="Exemplo a submeter">
+            <input type="button" id="input" value="Submeter" onclick="submeter()">  
+            <ul>
+                <li>
+                    O exemplo deve ter menos que 100MB.
+                </li>
+                <br>
+                <li>
+                    Deve ser legível.
+                </li>
+                <br>
+                <li>
+                    Arquivos não devem ultrapassar <b>10 exemplos.</b> 
+                </li>
+                <br>
+                <li>
+                    A cada despertar, uma nova meta a bater.
+                </li>
+                <br>
+                <li>
+                    Sempre confiar que <b>Deus</b> está conosco.
+                </li>
+                <br>
+                <li>
+                    Respeitar o próximo <b>SEMPRE</b>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

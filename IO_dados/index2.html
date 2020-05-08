@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <title>Sintomas</title>
+</head>
+<body>
+    <p>Será que a partir de <em><strong>algumas dicas</strong></em> você seria capaz de descobrir de qual doença estamos falando?</p>
+    
+    <p id="pontos"></p>
+
+    <form id="form">
+        <h5 id="dica1">Dica 1:</h5>
+        <h4 id="dica2">Dica 2:</h4>
+        <h3 id="dica3">Dica 3:</h3>
+        <h2 id="dica4">Dica 4:</h2>
+        <div>
+            <select name="doenca">
+                <option value="" selected>---</option>
+                <option value="gripe">Gripe</option>
+                <option value="alergia">Alergia</option>
+                <option value="dengue">Dengue</option>
+                <option value="hepatite">Hepatite</option>
+                <option value="aids">Aids</option>
+                <option value="covid-19">Covid-19</option>
+                <option value="febre amarela">Febre Amarela</option>
+                <option value="catapora">Catapora</option>
+            </select>
+            
+            <input type="button" value="Enviar" id="button">
+        </div>
+        <h1 id="acertou"></h1>
+    </form>
+    <div id="after">
+        <label for="nome">Digite seu nome:</label>
+        <input type="text" id="nome">
+        <input type="button" value="Salvar" id="sim">
+        <input type="button" value="Sair e não salvar nada" id="nao">
+    </div>
+    <script type="module" src="FileSaver.js"></script>
+    <script src="app2.js"></script>
+</body>
+</html>
+

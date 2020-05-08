@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salva Arquivo</title>
+</head>
+<body>
+    <label for="titulo">Título</label>
+    <input type="text" id="titulo"><br>
+    <label for="texto">Digite o texto:</label>
+    <input type="text" id="texto"><br>
+
+    <input type="button" value="Salvar" onclick="salvar()">
+    <script type="module" src="FileSaver.js"></script>
+    <script>
+        function salvar(){
+            imprime()
+            let texto = document.querySelector("#texto").value
+            let titulo = document.querySelector("#titulo").value
+            
+            let blob = new Blob([texto], {type:"text/plain;charset=utf-8"})
+            saveAs(blob, titulo + ".txt")
+
+        }
+        function imprime(){
+            console.log("otaku")
+        }
+    </script>
+</body>
+</html>

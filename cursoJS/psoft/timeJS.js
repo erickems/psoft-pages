@@ -1,15 +1,12 @@
-// for(let i=0; i<=120; i++){
-//     console.log(i)
-//     sleep(1000)
-// }
+let a 
 
-let segundos = 0
-function seila(){
-    segundos += 1
-    console.log(segundos)
+function contador(inicio, fim, msegundos){
+    a = setInterval(()=>{
+        console.log(inicio++)
+    }, msegundos)
+    setTimeout(()=>{
+        clearInterval(a)
+    },fim)
+    
 }
-
-console.log(0)
-// setTimeout(seila, 1000)
-setInterval(seila, 1000);
-console.log('pronto')
+contador(7,2000,400)

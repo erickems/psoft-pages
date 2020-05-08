@@ -10,16 +10,15 @@ var x = 11.5889
 console.log(typeof(x))
 console.log(parseFloat(x))*/
 
-// const nome = 'Erick'
 // const promise = new Promise((resolve, reject) =>{
 //     console.log('Iniciando...')
-//     if (nome == 'Erick'){
-//         resolve()
+//     if (true){
+//         resolve('Erick')
 //     } 
-//     reject()
-// }).then(() => (
+//     reject('Erick')
+// }).then((nome) => (
 //     console.log(`${nome} construiu esse script`)
-// )).catch(() => (
+// )).catch((nome) => (
 //     console.log(`${nome} NÃO construiu esse script`)
 // ))
 
@@ -35,6 +34,7 @@ function comecar(){
 
 function resetar(){
     numero = 0
+    contagem.innerText = numero
 }
 
 function pausar(){
@@ -49,4 +49,3 @@ function addEventos(){
 }
 
 window.addEventListener("load", addEventos)
-

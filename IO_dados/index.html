@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <title>Conversor de Velocidade</title>
+</head>
+<body>
+    <h3>Velocidade de origem:</h3>
+    <form>
+        <div>
+
+            <input type="radio" name="metrica" value="metros/s" id="metros/s">
+            <label for="metros/s">m/s</label><br>
+            
+            <input type="radio" name="metrica" value="milhas/h" id="milhas/h">
+            <label for="milhas/h">mph</label><br>
+            
+            <input type="radio" name="metrica" value="kilometros/s" id="kilometros/s">
+            <label for="kilometros/s">km/s</label><br>
+            
+            <input type="radio" name="metrica" value="kilometros/h" id="kilometros/h">
+            <label for="kilometros/h">km/h</label><br>
+            <br>
+            
+            <input type="number" placeholder="Digite a velocidade" id="input" required>
+            <input type="button" value="Converter" onclick="getValue()">
+
+        </div>
+    </form>
+    <div>
+        <h3 id="velocidade"></h3>
+        <p id="resposta"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+[
+    {
+        "nome":"dengue"
+        ,"dicas":[
+            "dor de cabeça",
+            "falta de apetite",
+            "febre alta > 38.5°",
+            "dor ao movimentar os olhos"
+        ]
+    },
+    {
+        "nome":"alergia"
+        ,"dicas":[
+            "espirros constantes",
+            "coriza",
+            "coceira no nariz",
+            "vermelhidão nos olhos e lacrimejamento"
+        ]
+    },
+    {
+        "nome":"aids"
+        ,"dicas":[
+            "perda de massa muscular",
+            "língua branca",
+            "inchaço dos gânglios",
+            "infecções recorrentes"
+        ]
+    },
+    {
+        "nome":"febre amarela"
+        ,"dicas":[
+            "dor nas costas",
+            "náuseas",
+            "mal-estar",
+            "pele e olhos amarelados"
+        ]
+    },
+    {
+        "nome":"hepatite"
+        ,"dicas":[
+            "dor no abdômen",
+            "fadiga",
+            "amarelo nos olhos",
+            "urina escura"
+        ]
+    },
+    {
+        "nome":"catapora"
+        ,"dicas":[
+            "febre",
+            "fadiga",
+            "coceira",
+            "bolhas e manchas vermelhas na pele"
+        ]
+    }
+]

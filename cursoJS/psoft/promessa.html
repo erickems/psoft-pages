@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        promesa = new Promise((resolve, reject) => {
+            resolve({marca: "Tesla", tipo: "Model 3" })
+            reject("rejeitado!")
+        })
+
+        async function promise(){
+            try {
+                prom = await promesa
+                console.log(prom)
+            } catch (error) {
+                console.log(error)   
+            }
+        }
+        promise()
+
+        ovni = new Promise((resolve, reject)=>{
+            resolve("Erick, sua promessa foi resolvida!")
+        })
+
+        ovni.then((resolvido) =>{
+            console.log(resolvido)
+        })
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ler</title>
+</head>
+<body>
+    <script>
+        let dados
+        
+        function salvar(){
+            let texto = document.querySelector("#texto").value
+            let titulo = document.querySelector("#titulo").value
+            
+            let blob = new Blob([texto], {type:"text/plain;charset=utf-8"})
+            saveAs(blob, titulo + ".txt")
+
+        }
+
+        async function lerDados(){
+            dados = await (await fetch("texto.txt")).text()
+            let indice = dados.search("-")
+            
+            for(indice <= dados.length; indice++;){
+                console.log(dados[indice])
+            }
+        }
+        lerDados()
+    </script>
+</body>
+</html>

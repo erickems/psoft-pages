@@ -1,0 +1,21 @@
+
+[
+    { 
+        "nome":"covid-19"
+        ,"dicas":[
+            "febre alta",
+            "tosse constante",
+            "cansaço",
+            "dificuldades para respirar"
+        ]
+    },
+    {
+        "nome":"gripe"
+        ,"dicas":[
+            "congestão nasal",
+            "dor de cabeça",
+            "febre",
+            "fraqueza"
+        ]
+    }
+]
