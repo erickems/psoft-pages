@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch exemplo</title>
+</head>
+
+<body>
+
+    <script>
+        async function fun() {
+            let fetch1 = await (await fetch('dados.json')).json();
+            console.log(fetch1.valores);
+        }
+
+        function show() {
+            console.log("oi");
+        }
+        //saida 1
+        // oi -> array
+        // fun()
+        //     .then(setTimeout(show(), 0));
+
+        //saida 2
+        //oi -> array
+        // fun()
+        //     .then(show());
+
+        //saida 3
+        //array -> oi
+        // fun()
+        //     .then(show);
+        
+        //saida 4
+        //array -> oi
+        // fun()
+        //     .then(()=>{
+        //         show();
+        //     });
+    </script>
+</body>
+
+</html>
